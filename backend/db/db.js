@@ -1,11 +1,11 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const dbConnection = () => {
   try {
     mongoose.connect(process.env.DB_CONNECTION);
-    console.log("Connection established");
+    console.log('Connection established');
   } catch (e) {
-    console.log("Connection failed!" + e);
+    console.log('Connection failed!' + e);
   }
 };
 
