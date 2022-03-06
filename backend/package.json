@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Developed in NodeJS, ExpressJS and MongoDB",
+  "description": "Developed in NodeJS, ExpressJS and mongoDB",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon -L index.js"
+    "start": "nodemon index.js"
   },
-  "author": "@JoseHM",
+  "author": "@josehm",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

@@ -1,17 +1,13 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const taskSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.ObjectId, ref: 'users' },
+const boardSchema = new mongoose.Schema({
+  userId: { type: mongoose.Schema.ObjectId, ref: "users" },
   name: String,
   description: String,
-  taskStatus: {
-    type: String,
-    enum: ['to-do', 'in-progress', 'finished'],
-    default: 'to-do',
-  },
+  taskStatus: String,
   imageUrl: String,
   registerDate: { type: Date, default: Date.now },
 });
 
-const task = mongoose.model('tasks', taskSchema);
-export default task;
+const board = mongoose.model("tasks", boardSchema);
+export default board;

@@ -1,11 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const dbConnection = () => {
+const dbConnection = async () => {
   try {
-    mongoose.connect(process.env.DB_CONNECTION);
-    console.log('Connection established');
+    await mongoose.connect(process.env.DB_CONNECTION, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connection with MongoDB: OK");
   } catch (e) {
-    console.log('Connection failed!' + e);
+    console.log("Error connecting to MongoDB: \n" + e);
   }
 };
 
