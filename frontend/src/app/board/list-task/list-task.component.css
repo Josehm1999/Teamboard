@@ -1,0 +1,30 @@
+.accordion_display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion_size {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  padding: 100px 16px 0px;
+}
+
+.btnTodo {
+  background-color: #8b3122;
+  color: #ffffff;
+}
+
+.btnInProgress {
+  background-color: #ac730b;
+  color: #ffffff;
+}
+
+.btnDone {
+  background-color: #0d7212;
+  color: #ffffff;
+}
+.spacer {
+  flex: 1 0 auto;
+}

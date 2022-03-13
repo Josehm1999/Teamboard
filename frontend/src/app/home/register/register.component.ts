@@ -26,6 +26,8 @@ export class RegisterComponent implements OnInit {
     this.registerData = {};
   }
 
+  ngOnInit(): void {}
+
   registerUser() {
     if (
       !this.registerData.name ||
@@ -65,6 +67,4 @@ export class RegisterComponent implements OnInit {
       panelClass: ['styleSnackBarError'],
     });
   }
-
-  ngOnInit(): void {}
 }

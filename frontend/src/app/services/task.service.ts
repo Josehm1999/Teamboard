@@ -20,7 +20,11 @@ export class TaskService {
     return this._http.put<any>(this.env + 'task/updateTask', task);
   }
 
-  deleteTask(_id: any) {
-    return this._http.delete<any>(this.env + `task/deleteTask/${_id}`);
+  deleteTask(task: any) {
+    return this._http.delete<any>(this.env + `task/deleteTask/` + task._id);
+  }
+
+  listTask() {
+    return this._http.get<any>(this.env + `task/listTask`);
   }
 }
